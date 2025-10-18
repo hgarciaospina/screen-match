@@ -3,6 +3,8 @@ package com.hgarcia.screenmatch.modelos;
 public class Main {
     public static void main(String[] args) {
 
+       /* Objetos de Peliculas */
+
        Pelicula miPelicula1 = new Pelicula();
        System.out.println("*******************************************************");
        miPelicula1.setNombre("Encanto");
@@ -22,5 +24,16 @@ public class Main {
        System.out.printf("Suma evaluaciones hechas por el público    : %10.2f%n", miPelicula1.getSumaEvaluaciones());
        System.out.printf("Cálculo de la media de las evaluaciones    : %10.2f%n", miPelicula1.calcularMediaEvaluaciones());
        System.out.println("*******************************************************");
+
+   /* Objetos de Series */
+
+       Serie casaDragon = new Serie();
+       casaDragon.setNombre("La Casa del Dragón");
+       casaDragon.setFechaDeLanzamiento(2022);
+       casaDragon.setTemporadas(1);
+       casaDragon.setMinutosPorEpisodio(50);
+       casaDragon.setEpisodiosPorTemporada(10);
+       casaDragon.mostrarFichaTecnica();
+       System.out.println(casaDragon.getDuracionEnMinutos());
     }
 }

@@ -1,16 +1,21 @@
 package com.hgarcia.screenmatch.modelos;
 
 public class Serie extends Titulo {
-    private int temporada;
+    private int temporadas;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
-    public int getTemporada() {
-        return temporada;
+    @Override
+    public int getDuracionEnMinutos() {
+        return temporadas * episodiosPorTemporada *minutosPorEpisodio;
     }
 
-    public void setTemporada(int temporada) {
-        this.temporada = temporada;
+    public int getTemporadas() {
+        return temporadas;
+    }
+
+    public void setTemporadas(int temporadas) {
+        this.temporadas = temporadas;
     }
 
     public int getEpisodiosPorTemporada() {
