@@ -44,16 +44,8 @@ public class Titulo {
         return sumaEvaluaciones;
     }
 
-    public void setSumaEvaluaciones(double sumaEvaluaciones) {
-        this.sumaEvaluaciones = sumaEvaluaciones;
-    }
-
     public int getTotalEvaluaciones() {
         return totalEvaluaciones;
-    }
-
-    public void setTotalEvaluaciones(int totalEvaluaciones) {
-        this.totalEvaluaciones = totalEvaluaciones;
     }
 
     public void mostrarFichaTecnica() {

@@ -1,5 +1,7 @@
 package com.hgarcia.screenmatch.modelos;
 
+import com.hgarcia.screenmatch.calculos.CalculadoraDeTiempo;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -23,7 +25,14 @@ public class Main {
        System.out.printf("Cantidad evaluaciones hechas por el público: %10.2f%n", (float)miPelicula1.getTotalEvaluaciones());
        System.out.printf("Suma evaluaciones hechas por el público    : %10.2f%n", miPelicula1.getSumaEvaluaciones());
        System.out.printf("Cálculo de la media de las evaluaciones    : %10.2f%n", miPelicula1.calcularMediaEvaluaciones());
-       System.out.println("*******************************************************");
+       System.out.println("******************************************************* \n");
+
+       Pelicula miPelicula2 = new Pelicula();
+       miPelicula2.setNombre("Matriz");
+       miPelicula2.setFechaDeLanzamiento(1998);
+       miPelicula2.setDuracionEnMinutos(180);
+       miPelicula2.mostrarFichaTecnica();
+
 
    /* Objetos de Series */
 
@@ -33,7 +42,17 @@ public class Main {
        casaDragon.setTemporadas(1);
        casaDragon.setMinutosPorEpisodio(50);
        casaDragon.setEpisodiosPorTemporada(10);
+       System.out.println("\n");
        casaDragon.mostrarFichaTecnica();
-       System.out.println(casaDragon.getDuracionEnMinutos());
+
+    /* Calculadora de tiempo */
+
+       CalculadoraDeTiempo calculadoraDeTiempo = new CalculadoraDeTiempo();
+       calculadoraDeTiempo.incluye(miPelicula1);
+       calculadoraDeTiempo.incluye(miPelicula2);
+       calculadoraDeTiempo.incluye(casaDragon);
+       System.out.println("\n");
+       System.out.println("Tiempo necesario  para ver todos los programas en estas vacaciones: "
+               + calculadoraDeTiempo.getTiempoTotal() + " minutos");
     }
 }
