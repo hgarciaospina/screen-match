@@ -5,11 +5,13 @@ public class Main {
 
        Pelicula miPelicula1 = new Pelicula();
        System.out.println("*******************************************************");
-       miPelicula1.nombre = "Encanto";
-       miPelicula1.fechaDeLanzamiento = 2021;
-       miPelicula1.duracionEnMinutos = 120;
-
+       miPelicula1.setNombre("Encanto");
+       miPelicula1.setFechaDeLanzamiento(2021);
+       miPelicula1.setDuracionEnMinutos(120);
+       miPelicula1.setIncluidoEnElPlan(true);
+       String seIncluyeEnElPlan = miPelicula1.isIncluidoEnElPlan() ? "Incluida en el plan" : "No incluída en el plan";
        miPelicula1.mostrarFichaTecnica();
+       System.out.println(seIncluyeEnElPlan);
 
        miPelicula1.evaluar(7.80);
        miPelicula1.evaluar(8.00);

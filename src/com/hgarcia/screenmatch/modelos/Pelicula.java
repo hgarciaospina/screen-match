@@ -1,12 +1,44 @@
 package com.hgarcia.screenmatch.modelos;
 
 public class Pelicula {
-    public String nombre;
-    public int fechaDeLanzamiento;
-    public int duracionEnMinutos;
-    public boolean incluidoEnElPlan;
+    private String nombre;
+    private int fechaDeLanzamiento;
+    private int duracionEnMinutos;
+    private boolean incluidoEnElPlan;
     private double sumaEvaluaciones;
     private int totalEvaluaciones;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+    public void setDuracionEnMinutos(int duracionEnMinutos) {
+        this.duracionEnMinutos = duracionEnMinutos;
+    }
+
+    public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
+        this.incluidoEnElPlan = incluidoEnElPlan;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getFechaDeLanzamiento() {
+        return fechaDeLanzamiento;
+    }
+
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
+    }
 
     public double getSumaEvaluaciones() {
         return sumaEvaluaciones;
