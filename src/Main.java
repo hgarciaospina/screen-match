@@ -5,12 +5,25 @@ public class Main {
        miPelicula1.nombre = "Encanto";
        miPelicula1.fechaDeLanzamiento = 2021;
        miPelicula1.duracionEnMinutos = 120;
+
        miPelicula1.mostrarFichaTecnica();
+
        miPelicula1.evaluar(7.80);
        miPelicula1.evaluar(10.00);
+       miPelicula1.evaluar(7.5);
+
        System.out.println(miPelicula1.totalEvaluaciones);
        System.out.println(miPelicula1.sumaEvaluaciones);
        System.out.println(miPelicula1.calcularMediaEvaluaciones());
+
+       System.out.println("******************");
+       System.out.println(miPelicula1.totalEvaluaciones = 2;
+       System.out.println(miPelicula1.sumaEvaluaciones = 1;
+       System.out.println(miPelicula1.calcularMediaEvaluaciones());
+       System.out.println("******************");
+
+
+
 
        Pelicula miPelicula2 = new Pelicula();
        miPelicula2.nombre = "Matrix";
