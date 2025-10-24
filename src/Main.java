@@ -1,6 +1,8 @@
-package com.hgarcia.screenmatch.modelos;
-
 import com.hgarcia.screenmatch.calculos.CalculadoraDeTiempo;
+import com.hgarcia.screenmatch.calculos.FiltroRecomendacion;
+import com.hgarcia.screenmatch.modelos.Episodios;
+import com.hgarcia.screenmatch.modelos.Pelicula;
+import com.hgarcia.screenmatch.modelos.Serie;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,9 +19,14 @@ public class Main {
        miPelicula1.mostrarFichaTecnica();
        System.out.println(seIncluyeEnElPlan);
 
+       //Evaluación película por el público
        miPelicula1.evaluar(7.80);
        miPelicula1.evaluar(8.00);
        miPelicula1.evaluar(9.50);
+
+       FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+       System.out.println("Comentarios generales Pelicula");
+       filtroRecomendacion.filtrar(miPelicula1);
 
        System.out.println("*******************************************************");
        System.out.printf("Cantidad evaluaciones hechas por el público: %10.2f%n", (float)miPelicula1.getTotalEvaluaciones());
@@ -45,6 +52,17 @@ public class Main {
        System.out.println("\n");
        casaDragon.mostrarFichaTecnica();
 
+       Episodios episodio1 = new Episodios();
+       episodio1.setNumero(1);
+       episodio1.setNombre("La visita del tío TOM");
+       episodio1.setSerie(casaDragon);
+       episodio1.setTotalVisualizaciones(3000);
+
+       FiltroRecomendacion filtroRecomendacionEpisodio1 = new FiltroRecomendacion();
+       System.out.println("Comentarios generales público");
+       filtroRecomendacionEpisodio1.filtrar(episodio1);
+
+
     /* Calculadora de tiempo */
 
        CalculadoraDeTiempo calculadoraDeTiempo = new CalculadoraDeTiempo();
@@ -54,5 +72,6 @@ public class Main {
        System.out.println("\n");
        System.out.println("Tiempo necesario  para ver todos los programas en estas vacaciones: "
                + calculadoraDeTiempo.getTiempoTotal() + " minutos");
+
     }
 }
